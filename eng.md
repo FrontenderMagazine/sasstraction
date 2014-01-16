@@ -1,3 +1,5 @@
+# Sasstraction
+
 Emil has been [playing around with CSS variables][1] (or “custom properties
 ” as they should more correctly be known), which have started landing in some 
 browsers. It’s well worth a read. He does a great job of explaining the 
@@ -23,7 +25,6 @@ Right now, [CSS is a relatively-straightforward language][5]:
 
 > CSS isn’t voodoo, it’s a simple and straightforward language where you
 > declare an element has a style and it happens.
->
 
 That’s a somewhat-simplistic summation, and there’s definitely some
 complexity to certain aspects of CSS—like[specificity][6] or 
@@ -33,7 +34,6 @@ syntax:
     selector {
         property: value;
     }
-    
 
 That’s it. I think that this simplicity is quite beautiful and surprisingly
 powerful.
@@ -53,7 +53,6 @@ completely modular:
     selector {
         property: value;
     }
-    
 
 None of those pieces (selector, property, value) reference anything elsewhere
 in the style sheet. But as soon as you introduce variables, that modularity is 
@@ -75,27 +74,19 @@ have to define it. The declaration and the invocation happen in separate blocks:
         to {
             property: value;
         }
-    }
-    
+    }    
 
 I’m not sure that there’s any better way to provide powerful animations in
-CSS, but this feature does sacrifice modularity …and I believe that has a knock-
-on effect for learnability and[readability][15].
+CSS, but this feature does sacrifice modularity …and I believe that has a knock-on effect for learnability and[readability][15].
 
 So CSS variables (or custom properties) aren’t the first crack in the wall of
-the design principles behind CSS. To mix my metaphors, the slippery slope began 
-with @keyframes (and maybe @font-face too
-).
+the design principles behind CSS. To mix my metaphors, the slippery slope began with @keyframes (and maybe @font-face too).
 
 But there’s no denying that having variables/constants in CSS provide a lot
 of power. There’s plenty of programming ideas (like loops and functions) that 
-would provide lots of power to CSS. I still don’t think it’s a good idea to mix 
-up the declarative and the programmatic. That way lies XSLT—a strange hybrid 
-beast that’s sort of a markup language and sort of a programming language.
+would provide lots of power to CSS. I still don’t think it’s a good idea to mix up the declarative and the programmatic. That way lies XSLT—a strange hybrid beast that’s sort of a markup language and sort of a programming language.
 
-I feel very strongly that HTML and CSS should remain learnable languages. I don
-’t just mean for professionals. I believe it’s really important that*anybody*
-should be able to write and style a web page.
+I feel very strongly that HTML and CSS should remain learnable languages. I don’t just mean for professionals. I believe it’s really important that *anybody* should be able to write and style a web page.
 
 Now does that mean that CSS must therefore remain hobbled? No, I don’t think
 so. Thanks to preprocessors like Sass, we can have our cake and eat it too. As 
@@ -103,8 +94,7 @@ professionals, we can use tools like Sass to wield the power of variables,
 functions (mixins) and other powerful concepts from the programming world.
 
 Preprocessors cut the Gordian knot that’s formed from the tension in CSS
-between providing powerful features and remaining relatively easy to learn. That
-’s why I’m quite happy for variables, mixins, nesting and the like to remain 
+between providing powerful features and remaining relatively easy to learn. That’s why I’m quite happy for variables, mixins, nesting and the like to remain 
 firmly in the realm of Sass.
 
 Incidentally, at An Event Apart, Chris was making the case that Sass’s power
@@ -113,8 +103,7 @@ true—I think the fact that it provides a layer of abstraction might be a red
 herring.
 
 Chris made the case for abstractions being inherently A Good Thing. Certainly
-if you go far enough down the stack (to Assembly Language), that’s true. But not
-all abstractions are good abstractions, and I’m not just talking about
+if you go far enough down the stack (to Assembly Language), that’s true. But not all abstractions are good abstractions, and I’m not just talking about
 [Spolky’s law of leaky abstractions][16].
 
 Let’s take two different abstractions that share a common origin story:
